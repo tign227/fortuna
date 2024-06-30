@@ -25,4 +25,8 @@ contract MemeVault is ITokenVault {
         require(IERC20(memeToken).transfer(msg.sender, _amount), "transfer failed");
     }
 
+    function _shouldSwap() internal view returns (bool) {
+        return true;
+    }
+
 }
